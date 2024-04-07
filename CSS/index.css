@@ -1,0 +1,51 @@
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+.container {
+  text-align: center;
+}
+.bulb {
+  width: 100px;
+  height: 100px;
+  background-color: #ccc;
+  border-radius: 50%;
+  position: relative;
+  display: inline-block;
+}
+.bulb::before {
+  content: "";
+  width: 15px;
+  height: 15px;
+  background-color: transparent;
+  border-radius: 50%;
+  border: 5px solid #fff;
+  position: absolute;
+  top: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.bulb.on::before {
+  background-color: yellow;
+  box-shadow: 0 0 20px 10px yellow;
+}
+.controls {
+  margin-top: 20px;
+}
+button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  background-color: dodgerblue;
+  color: #fff;
+  border-radius: 5px;
+}
+button:focus {
+  outline: none;
+}
